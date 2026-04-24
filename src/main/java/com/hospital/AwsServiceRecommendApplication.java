@@ -6,8 +6,8 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 @SpringBootApplication
 public class AwsServiceRecommendApplication {
 
-	public static void main(String[] args) {
-		SpringApplication.run(AwsServiceRecommendApplication.class, args);
-	}
+    public static void main(String[] args) {
+        SpringApplication.run(AwsServiceRecommendApplication.class, args);
+    }
 
 }
