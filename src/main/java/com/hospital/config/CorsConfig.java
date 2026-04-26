@@ -16,7 +16,7 @@ public class CorsConfig {
         CorsConfiguration config = new CorsConfiguration();
 
         // ✅ FIX: DO NOT use "*"
-        config.setAllowedOrigins(List.of("http://localhost:3001","http://localhost:3000"));
+        config.setAllowedOrigins(List.of("http://localhost:3001","http://localhost:3000",  "https://cloud-frontend-5kqr.onrender.com"));
 
         config.setAllowedMethods(List.of("GET", "POST", "PUT", "DELETE", "OPTIONS"));
         config.setAllowedHeaders(List.of("*"));
