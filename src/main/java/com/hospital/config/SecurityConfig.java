@@ -3,6 +3,7 @@ package com.hospital.config;
 import com.hospital.service.CustomUserDetailsService;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.http.HttpMethod;
 import org.springframework.security.authentication.AuthenticationProvider;
 import org.springframework.security.authentication.dao.DaoAuthenticationProvider;
 import org.springframework.security.config.Customizer;
@@ -27,6 +28,7 @@ public class SecurityConfig {
                 .csrf(csrf -> csrf.disable())   // ✅ disable CSRF
                 .cors(cors -> {})               // ✅ enable CORS
                 .authorizeHttpRequests(auth -> auth
+                        .requestMatchers(HttpMethod.OPTIONS, "/**").permitAll()
                         .requestMatchers("/auth/**").permitAll()  // ✅ allow login/register
                         .anyRequest().permitAll()                 // ✅ TEMP allow all (IMPORTANT)
                 );
