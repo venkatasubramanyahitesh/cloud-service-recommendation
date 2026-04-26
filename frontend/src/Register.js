@@ -33,7 +33,7 @@ export default function RegisterPage() {
     if (password !== confirm) { setError("Passwords do not match."); return; }
     setLoading(true); setError(null);
     try {
-      const res = await fetch("http://localhost:8080/auth/register", {
+      const res = await fetch("https://cloud-backend-avtz.onrender.com/auth/register", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ email: email.trim(), password }),

@@ -20,7 +20,7 @@ export default function LoginPage() {
     if (!email.trim() || !password) { setError("Email and password are required."); return; }
     setLoading(true); setError(null);
     try {
-      const res = await fetch("http://localhost:8080/auth/login", {
+      const res = await fetch("https://cloud-backend-avtz.onrender.com/auth/login", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ email: email.trim(), password }),
