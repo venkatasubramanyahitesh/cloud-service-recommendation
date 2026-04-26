@@ -177,7 +177,7 @@ function HomePage() {
     const email = localStorage.getItem("email");
 const password = localStorage.getItem("password");
 
-const res = await fetch("http://localhost:8080/api/recommend", {
+const res = await fetch("https://cloud-backend-avtz.onrender.com/api/recommend", {
   method: "POST",
   headers: {
     "Content-Type": "application/json",
