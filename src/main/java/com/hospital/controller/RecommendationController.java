@@ -11,7 +11,10 @@ import java.util.Map;
 
 @RestController
 @RequestMapping("/api")
-@CrossOrigin("*")
+@CrossOrigin(origins = {
+        "http://localhost:3000",
+        "https://cloud-frontend-5kqr.onrender.com"
+})
 public class RecommendationController {
 
     @Autowired
